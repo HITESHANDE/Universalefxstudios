@@ -1,0 +1,102 @@
+/* home.css - for home.html only */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
+  height: 100vh;
+}
+
+/* Home Section Styling */
+.home-section {
+  position: relative;
+  background: linear-gradient(
+      to bottom,
+      rgba(34, 33, 33, 0.9),
+      /* light overlay at top */ rgba(34, 33, 33, 0.2)
+        /* fades to transparent */
+    ),
+    url("../Images/Space_HDRI.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: orange;
+}
+
+/* Main content stays above */
+.home-content {
+  position: relative;
+  max-width: 1000px;
+  margin: auto;
+  padding: 100px 20px 40px;
+  text-align: center;
+}
+
+.home-content h1 {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.home-content p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.home-content h2 {
+  margin-top: 30px;
+  font-size: 18px;
+}
+
+.tpntext {
+  font-size: 25px;
+}
+
+.showreel-video video {
+  /* width: 100%; */
+  max-width: 720px;
+  border: 3px solid rgb(71, 46, 46);
+  border-radius: 25px;
+  margin: 20px 0;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+#companylogo {
+  height: 200px;
+  margin-right: 20px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: right;
+  align-self: flex-start;
+  margin-top: 55px;
+  flex: 1; /* take up remaining space */
+  gap: 20px; /* spacing between links */
+}
+
+.navbar a {
+  color: orange;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.navbar a:hover {
+  background: rgba(53, 101, 44, 0.874);
+  color: white;
+  cursor: pointer;
+  transform: scale(1.05);
+  box-shadow: 1px 2px 18px 1px rgba(97, 225, 11, 0.75);
+}

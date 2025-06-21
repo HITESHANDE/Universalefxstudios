@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1; /* ensures content is above the video */
+  opacity: 1; /* you can lower this if needed */
+}
+.overlay-image {
+  background: url("../Images/UES\ Logo.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.9; /* adjust for transparency */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  pointer-events: none; /* allows clicking through */
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+#companylogo {
+  height: 60px; /* Resize image here */
+  width: auto;
+  margin-right: 20px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: right;
+  flex: 1; /* take up remaining space */
+  gap: 20px; /* spacing between links */
+}
+
+.navbar a {
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 10px 15px;
+}
+
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+  cursor: pointer;
+}
