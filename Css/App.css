@@ -172,6 +172,7 @@ body {
   color: #9ef29b;
   margin-bottom: 8px;
 }
+
 .projects-section {
   background-color: #111;
   color: white;
@@ -379,4 +380,116 @@ body {
   .footer-section {
     max-width: 400px;
   }
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 30px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.service-card {
+  background: #111;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.7);
+}
+
+/* Overlay image section */
+.overlay-wrap {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+  cursor: ew-resize;
+}
+
+.overlay-wrap img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  user-select: none;
+  pointer-events: none;
+}
+
+.top {
+  clip-path: inset(0 50% 0 0);
+  transition: clip-path 0.05s linear;
+}
+
+.divider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 3px;
+  background: #00bcd4;
+  cursor: ew-resize;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.divider:hover {
+  background: #03e9f4;
+}
+
+.handle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px rgba(0, 188, 212, 0.7);
+}
+
+.handle img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+/* Card content */
+.service-card h3 {
+  margin: 15px;
+  font-size: 1.3rem;
+  color: #00bcd4;
+}
+
+.service-card p {
+  margin: 0 15px 10px;
+  color: #bbb;
+  font-size: 0.95rem;
+}
+
+.service-card ul {
+  margin: 0 20px 20px;
+  padding-left: 0;
+  list-style: none;
+  color: #ccc;
+}
+
+.service-card ul li {
+  margin-bottom: 6px;
+  font-size: 0.9rem;
 }

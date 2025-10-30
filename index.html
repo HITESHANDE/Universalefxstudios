@@ -39,53 +39,70 @@
     <h2>Our Services</h2>
     <div class="services-container">
 
-      <div class="service-card">
-        <img src="./Images/kite-lady1.jpg" alt="Roto Scoping" />
-        <h3>Roto Scoping</h3>
-        <p>Clean edges. Perfect motion. Every frame.</p>
-        <ul>
-          <li>✔ Complex hair & motion blur details</li>
-          <li>✔ Multi-pass roto for VFX layering</li>
-          <li>✔ Delivered in Nuke, Silhouette or Mocha workflows</li>
-          <li>✔ Ideal for films, TVCs, OTT and streaming content</li>
-        </ul>
-      </div>
+     
 
-      <div class="service-card">
-        <img src="./Images/helicopter-jump1.jpg" style="width: 370px;" alt="Prep / Paint" />
-        <h3>Prep / Paint (Cleanup)</h3>
-        <p>We erase what shouldn’t be there — flawlessly.</p>
-        <ul>
-          <li>✔ Wire, rig and marker removal</li>
-          <li>✔ Beauty cleanup / de-aging / tattoo removal</li>
-          <li>✔ Plate restoration and BG fixes</li>
-          <li>✔ High-quality continuity for VFX integration</li>
-        </ul>
+        <!-- Card 1 -->
+    <div class="service-card">
+      <div class="overlay-wrap">
+        <img class="base" src="Images/kite-lady1.jpg" alt="Base Image">
+        <img class="top" src="Images/kite-lady2.jpg" alt="Top Image">
+        <div class="divider">
+          <div class="handle">
+          </div>
+        </div>
       </div>
+      <h3>Roto Scoping</h3>
+      <p>Clean edges. Perfect motion. Every frame.</p>
+      <ul>
+        <li>✔ Complex hair & motion blur details</li>
+        <li>✔ Multi-pass roto for VFX layering</li>
+        <li>✔ Delivered in Nuke, Silhouette or Mocha workflows</li>
+        <li>✔ Ideal for films, TVCs, OTT and streaming content</li>
+      </ul>
+    </div>
 
-      <div class="service-card">
-        <img src="./Images/helicopter-jump1.jpg" style="width: 370px;" alt="Match Moving" />
-        <h3>Match Moving / Tracking</h3>
-        <p>Perfect tracking — the invisible foundation of flawless CG.</p>
-        <ul>
-          <li>✔ 3D camera matchmoving for VFX/CGI</li>
-          <li>✔ Object, prop and face tracking</li>
-          <li>✔ Lens distortion analysis & removal</li>
-          <li>✔ FBX / Alembic / Maya-ready outputs</li>
-        </ul>
+    <!-- Card 2 -->
+    <div class="service-card">
+      <div class="overlay-wrap">
+        <img class="base" src="Images/helicopter-jump1.jpg" alt="Base Image">
+        <img class="top" src="Images/helicopter-jump2.jpg" alt="Top Image">
+        <div class="divider">
+          <div class="handle">
+          </div>
+        </div>
       </div>
+      <h3>Prep / Paint (Cleanup) </h3>
+      <p>We erase what shouldn’t be there — flawlessly.</p>
+      <ul>
+        <li>✔ Wire, rig and marker removal </li>
+        <li>✔ Beauty cleanup / de-aging / tattoo removal</li>
+        <li>✔ Plate restoration and BG fixes </li>
+        <li>✔ High-quality frame continuity for VFX integration </li>
+      </ul>
+    </div>
 
-      <div class="service-card">
-        <img src="./Images/helicopter-jump1.jpg" style="width: 370px;" alt="Compositing" />
-        <h3>Compositing</h3>
-        <p>Bringing it all together — seamlessly.</p>
-        <ul>
-          <li>✔ Green/blue screen keying</li>
-          <li>✔ Layer- and node-based compositing</li>
-          <li>✔ Color correction, relighting and shot integration</li>
-          <li>✔ Delivery for OTT, commercials and films</li>
-        </ul>
+    <!-- Card 3 -->
+    <div class="service-card">
+      <div class="overlay-wrap">
+        <img class="base" src="https://picsum.photos/id/1035/800/500" alt="Base Image">
+        <img class="top" src="https://picsum.photos/id/1043/800/500" alt="Top Image">
+        <div class="divider">
+          <div class="handle">
+          </div>
+        </div>
       </div>
+      <h3>Compositing</h3>
+      <p>Bringing it all together — seamlessly.  </p>
+      <ul>
+        <li>✔ Green/blue screen keying </li>
+        <li>✔ Layer-based and node-based compositing (Nuke, After Effects) </li>
+        <li>✔ Color correction, relighting and shot integration </li>
+        <li>✔ Delivery for OTT, commercials, music videos and films </li>
+      </ul>
+    </div>
+  </div> 
+
+     
 
     </div>
   </section>
@@ -184,5 +201,40 @@
 
 
 </body>
+
+<script>
+    document.querySelectorAll('.overlay-wrap').forEach((wrap) => {
+      const divider = wrap.querySelector('.divider');
+      const handle = wrap.querySelector('.handle');
+      const topImg = wrap.querySelector('.top');
+      let dragging = false;
+
+      const moveDivider = (x) => {
+        const rect = wrap.getBoundingClientRect();
+        let pos = ((x - rect.left) / rect.width) * 100;
+        pos = Math.max(0, Math.min(100, pos));
+        divider.style.left = `${pos}%`;
+        handle.style.left = `${pos}%`;
+        topImg.style.clipPath = `inset(0 ${100 - pos}% 0 0)`;
+      };
+
+      const startDrag = () => (dragging = true);
+      const stopDrag = () => (dragging = false);
+
+      divider.addEventListener('mousedown', startDrag);
+      handle.addEventListener('mousedown', startDrag);
+      window.addEventListener('mouseup', stopDrag);
+      window.addEventListener('mousemove', (e) => {
+        if (dragging) moveDivider(e.clientX);
+      });
+
+      divider.addEventListener('touchstart', startDrag);
+      handle.addEventListener('touchstart', startDrag);
+      window.addEventListener('touchend', stopDrag);
+      window.addEventListener('touchmove', (e) => {
+        if (dragging) moveDivider(e.touches[0].clientX);
+      });
+    });
+</script>
 
 </html>
