@@ -7,6 +7,23 @@
 body {
   font-family: Arial, sans-serif;
 }
+
+
+.video-section {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 60px);
+  /* subtract navbar height if needed */
+  overflow: hidden;
+}
+
+.video-section video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* ensures it fills without distortion */
+}
+
 .background-video {
   position: fixed;
   top: 0;
@@ -14,41 +31,63 @@ body {
   width: 100vw;
   height: 100vh;
   object-fit: cover;
-  z-index: -1; /* ensures content is above the video */
-  opacity: 1; /* you can lower this if needed */
+  z-index: -1;
+  /* ensures content is above the video */
+  opacity: 1;
+  /* you can lower this if needed */
 }
+
 .overlay-image {
   background: url("../Images/UES\ Logo.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  opacity: 0.9; /* adjust for transparency */
+  opacity: 0.9;
+  /* adjust for transparency */
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
   z-index: 1;
-  pointer-events: none; /* allows clicking through */
+  pointer-events: none;
+  /* allows clicking through */
+}
+
+#companylogo {
+  height: 60px;
+  /* Resize image here */
+  width: auto;
+  margin-right: 20px;
 }
 
 .navbar {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  /* space between logo and links */
   padding: 10px 20px;
+  background-color: black;
 }
 
-#companylogo {
-  height: 60px; /* Resize image here */
+.nav-logo img {
+  height: 20px;
+  /* adjust as needed */
   width: auto;
-  margin-right: 20px;
+  cursor: pointer;
 }
 
 .nav-links {
   display: flex;
-  justify-content: right;
-  flex: 1; /* take up remaining space */
-  gap: 20px; /* spacing between links */
+  justify-content: flex-end;
+  gap: 20px;
+  /* spacing between links */
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
 }
 
 .navbar a {
@@ -62,4 +101,278 @@ body {
   background-color: #ddd;
   color: black;
   cursor: pointer;
+}
+
+
+.services-section {
+  background-color: #111;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.services-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-card {
+  background-color: #1c1c1c;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding-bottom: 20px;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.service-card .overlay-wrap img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.service-card h3 {
+  font-size: 1.3rem;
+  margin: 15px 20px 5px;
+  color: #fff;
+}
+
+.service-card p {
+  color: #ccc;
+  font-size: 0.95rem;
+  margin: 0 20px 10px;
+}
+
+.service-card ul {
+  list-style: none;
+  padding: 0 20px;
+  margin: 0;
+}
+
+.service-card li {
+  font-size: 0.9rem;
+  color: #9ef29b;
+  margin-bottom: 8px;
+}
+.projects-section {
+  background-color: #111;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.projects-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.projects-grid img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.projects-grid img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+}
+
+
+
+
+
+.contact-section {
+  background-color: #111;
+  color: white;
+  text-align: center;
+  padding: 10px 20px;
+}
+
+.contact-badge {
+  background-color: #1e1e1e;
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 50px;
+  color: #ccc;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+.contact-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.contact-subtext {
+  color: #bbb;
+  margin-bottom: 40px;
+}
+
+.contact-subtext a {
+  color: #ff8c1a;
+  text-decoration: none;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contact-form label {
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.contact-form span {
+  color: #ff8c1a;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background-color: #1c1c1c;
+  border: 1px solid #333;
+  color: white;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border 0.2s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #ff8c1a;
+}
+
+.contact-form button {
+  background-color: #ff8c1a;
+  border: none;
+  color: white;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-form button:hover {
+  background-color: #e57a00;
+  transform: translateY(-2px);
+}
+
+.footer {
+  background-color: #111;
+  color: #ccc;
+  padding: 50px 20px 20px;
+  font-size: 0.95rem;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  flex: 1 1 250px;
+  min-width: 250px;
+}
+
+.footer-logo {
+  width: 180px;
+  height: auto;
+}
+
+.footer-section h3 {
+  color: #fff;
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+}
+
+.accent {
+  color: #ff8c1a;
+  margin-right: 6px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 6px;
+}
+
+.footer-section p {
+  line-height: 1.6;
+  margin: 0 0 6px;
+}
+
+.footer-divider {
+  height: 1px;
+  background-color: #222;
+  margin: 30px 0 20px;
+}
+
+.footer-bottom {
+  text-align: center;
+}
+
+.footer-logo-small {
+  width: 150px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.highlight {
+  color: #ff8c1a;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-section {
+    max-width: 400px;
+  }
 }

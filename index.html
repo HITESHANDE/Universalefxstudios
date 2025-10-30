@@ -1,25 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Universal EFX Studios Webpage</title>
-  </head>
-  <link rel="stylesheet" type="text/css" href="./Css/App.css" />
-  <body>
-    <video autoplay muted loop class="background-video">
-      <source src="./Videos/9341449-uhd_3840_2160_24fps.mp4" type="video/mp4"  />
-      Your browser does not support HTML5 video.
-    </video>
-    <div class="navbar">
-      <div class="nav-links">
-        <a href="./Home.html">Home</a>
-        <a href="./Services.html">Services</a>
-        <a href="#">Projects</a>
-        <a href="./AboutUs.html">About Us</a>
-        <a href="./ContactUs.html">Contact Us</a>
-      </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Universal EFX Studios</title>
+</head>
+<link rel="stylesheet" type="text/css" href="./Css/App.css" />
+
+<body>
+  <!-- <video autoplay muted loop class="background-video">
+    <source src="./Videos/9341449-uhd_3840_2160_24fps.mp4" type="video/mp4" />
+    Your browser does not support HTML5 video.
+  </video> -->
+  <div class="navbar">
+    <div class="nav-logo">
+      <img src="Images/logo.png" alt="Logo" />
     </div>
-    <div class="overlay-image"></div>
-  </body>
+    <div class="nav-links">
+      <!-- <a href="./Home.html">Home</a> -->
+      <a href="./Services.html">Services</a>
+      <a href="#">Projects</a>
+      <a href="./AboutUs.html">About Us</a>
+      <a href="./ContactUs.html">Contact Us</a>
+    </div>
+  </div>
+  <!-- <div class="overlay-image"></div -->
+  <div class="video-section">
+  <video autoplay muted loop>
+    <source src="./Videos/UES_Showreel (1).mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+
+<!-- Services Section -->
+<section class="services-section">
+  <h2>Our Services</h2>
+  <div class="services-container">
+    
+    <div class="service-card">
+      <img src="./Images/kite-lady1.jpg" alt="Roto Scoping" />
+      <h3>Roto Scoping</h3>
+      <p>Clean edges. Perfect motion. Every frame.</p>
+      <ul>
+        <li>✔ Complex hair & motion blur details</li>
+        <li>✔ Multi-pass roto for VFX layering</li>
+        <li>✔ Delivered in Nuke, Silhouette or Mocha workflows</li>
+        <li>✔ Ideal for films, TVCs, OTT and streaming content</li>
+      </ul>
+    </div>
+
+    <div class="service-card">
+      <img src="./Images/helicopter-jump1.jpg" style="width: 370px;" alt="Prep / Paint" />
+      <h3>Prep / Paint (Cleanup)</h3>
+      <p>We erase what shouldn’t be there — flawlessly.</p>
+      <ul>
+        <li>✔ Wire, rig and marker removal</li>
+        <li>✔ Beauty cleanup / de-aging / tattoo removal</li>
+        <li>✔ Plate restoration and BG fixes</li>
+        <li>✔ High-quality continuity for VFX integration</li>
+      </ul>
+    </div>
+
+    <div class="service-card">
+      <img src="./Images/helicopter-jump1.jpg" style="width: 370px;"  alt="Match Moving" />
+      <h3>Match Moving / Tracking</h3>
+      <p>Perfect tracking — the invisible foundation of flawless CG.</p>
+      <ul>
+        <li>✔ 3D camera matchmoving for VFX/CGI</li>
+        <li>✔ Object, prop and face tracking</li>
+        <li>✔ Lens distortion analysis & removal</li>
+        <li>✔ FBX / Alembic / Maya-ready outputs</li>
+      </ul>
+    </div>
+
+    <div class="service-card">
+      <img src="./Images/helicopter-jump1.jpg" style="width: 370px;"  alt="Compositing" />
+      <h3>Compositing</h3>
+      <p>Bringing it all together — seamlessly.</p>
+      <ul>
+        <li>✔ Green/blue screen keying</li>
+        <li>✔ Layer- and node-based compositing</li>
+        <li>✔ Color correction, relighting and shot integration</li>
+        <li>✔ Delivery for OTT, commercials and films</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- Projects Section -->
+<section class="projects-section">
+  <h2>Our Projects</h2>
+  <div class="projects-grid">
+    <img src="Images/Bahubali 2.jpg" alt="Project 2">
+    <img src="Images/Kanguva.jpg" alt="Project 3">
+    <img src="Images/Salaar.jpg" alt="Project 4">
+    <img src="Images/Mirai.jpg" alt="Project 5">
+    <img src="Images/Avatar Fire and Ash.jpg" alt="Project 6">
+    <img src="Images/Kingdom Of The Planet of the Apes.jpg" alt="Project 6">
+    <img src="Images/Joker.jpg" alt="Project 6">
+    <img src="Images/Squid-game.jpg" alt="Project 6">
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact-section" id="contact">
+  <p class="contact-badge">Contact us</p>
+  <h2>Let's get in touch</h2>
+  <p class="contact-subtext">
+    Or just reach out manually to 
+    <a href="mailto:info@universalefx.com">info@universalefx.com</a>
+  </p>
+
+  <form class="contact-form">
+    <label for="name">Name <span>*</span></label>
+    <input type="text" id="name" name="name" required />
+
+    <label for="email">Email <span>*</span></label>
+    <input type="email" id="email" name="email" required />
+
+    <label for="company">Company/Studio name <span>*</span></label>
+    <input type="text" id="company" name="company" required />
+
+    <label for="subject">Subject <span>*</span></label>
+    <input type="text" id="subject" name="subject" required />
+
+    <label for="message">Message</label>
+    <textarea id="message" name="message" rows="4"></textarea>
+
+    <label for="file">Upload Reference File</label>
+    <input type="file" id="file" name="file" />
+
+    <button type="submit">Send message</button>
+  </form>
+</section>
+
+<!-- Footer Section -->
+<footer class="footer">
+  <div class="footer-content">
+    <!-- Left: Partner Logo -->
+    <div class="footerb-section">
+      <img src="Images/TPN Gold Shield.png" alt="Trusted Partner Network" class="footer-logo" />
+    </div>
+
+    <!-- Middle: Services -->
+    <div class="footer-section">
+      <h3><span class="accent">|</span> Our Services</h3>
+      <ul>
+        <li>Rotoscoping</li>
+        <li>Prep / Paint (Cleanup)</li>
+        <li>Match Moving / Tracking</li>
+        <li>Compositing</li>
+      </ul>
+    </div>
+
+    <!-- Right: Location -->
+    <div class="footer-section">
+      <h3><span class="accent">|</span> Location</h3>
+      <p><strong>📍 WEST MARREDPALLY</strong></p>
+      <p>
+        4-10-005, Plot No.3/3, 2nd Floor, Backside of<br />
+        West Marredpally Police Station,<br />
+        Secunderabad, Hyderabad, Telangana - 500026
+      </p>
+    </div>
+  </div>
+
+  <!-- Divider Line -->
+  <div class="footer-divider"></div>
+
+  <!-- Bottom Bar -->
+  <div class="footer-bottom">
+    <img src="Images/UES Logo.png" alt="Universal EFX Studios" class="footer-logo-small" />
+    <p>
+      Copyright © 2025 All Rights Reserved by
+      <span class="highlight">Universal EFX Studio.</span>
+    </p>
+  </div>
+</footer>
+
+
+
+</body>
+
 </html>
