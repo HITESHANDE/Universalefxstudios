@@ -523,6 +523,7 @@ body {
   align-items: center;
   justify-content: center;
   box-shadow: 0 0 10px rgba(0, 188, 212, 0.7);
+  background: center / contain no-repeat url("../Images/UES Logo.png");
 }
 
 .handle img {
