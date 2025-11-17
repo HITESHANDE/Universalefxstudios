@@ -224,7 +224,7 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 25px;
-  max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -270,6 +270,15 @@ body {
 .projects-grid img:hover {
   transform: scale(1.03);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+}
+
+.first-grid {
+  grid-template-columns: repeat(5, 1fr); /* 5 in one row */
+  margin-bottom: 2rem;
+}
+
+.second-grid {
+  grid-template-columns: repeat(4, 1fr); /* or another layout you prefer */
 }
 
 
