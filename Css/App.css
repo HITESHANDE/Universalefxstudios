@@ -74,7 +74,8 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 10px 20px;
-  background-color: transparent; /* transparent at the top */
+  background-color: transparent;
+  /* transparent at the top */
   transition: background-color 0.4s ease, box-shadow 0.4s ease;
   z-index: 1000;
 }
@@ -207,7 +208,7 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
 } */
- .projects-section {
+.projects-section {
   background-color: #111;
   color: white;
   text-align: center;
@@ -557,4 +558,65 @@ body {
 .service-card ul li {
   margin-bottom: 6px;
   font-size: 0.9rem;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background: white;
+  margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    gap: 1.5rem;
+    z-index: 999;
+  }
+
+  .nav-links a {
+    padding: 10px;
+    display: block;
+    font-size: 1.2rem;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  /* Show hamburger */
+  .hamburger {
+    display: block;
+  }
+
+  .nav-logo img {
+    height: 20px;
+    width: 300px;
+    cursor: pointer;
+
+  }
+
+  .nav-logo .small img {
+    height: 10px;
+    width: 10px;
+    cursor: pointer;
+  }
+  .main-logo{
+    display: none;
+  }
 }
