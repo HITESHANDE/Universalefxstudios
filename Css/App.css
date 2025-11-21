@@ -16,7 +16,6 @@ body {
 .video-section {
   position: relative;
   width: 100%;
-  height: calc(100vh - 60px);
   /* subtract navbar height if needed */
   overflow: hidden;
 }
