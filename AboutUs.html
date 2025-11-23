@@ -1,4 +1,4 @@
-<!doctype html>
+<!-- <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -10,7 +10,6 @@
 
 <body style="margin:0;background:black;color:white;">
 
-  <!-- NAVBAR -->
   <div class="navbar" id="navbar">
     <div class="nav-logo">
       <div class="logo-wrapper">
@@ -35,7 +34,6 @@
     </div>
   </div>
 
-  <!-- About Us Content -->
    <main style="max-width:800px;margin:0 auto;padding:60px 20px 80px;font-family:'Times New Roman', serif;line-height:1.7;color:#e6e6e6;text-align:center;">
 
   <button onclick="history.back()" 
@@ -92,7 +90,6 @@
 </main>
 
 
-  <!-- NAV SCRIPTS -->
   <script>
     const navbar = document.querySelector('.navbar');
 
@@ -107,7 +104,6 @@
       navLinks.classList.toggle("active");
     });
 
-    // Close hamburger when clicking a link
     document.querySelectorAll(".nav-links a").forEach(link => {
       link.addEventListener("click", () => {
         navLinks.classList.remove("active");
@@ -116,4 +112,180 @@
   </script>
 
 </body>
-</html>
+</html> -->
+<!DOCTYPE html>
+
+<link rel="stylesheet" type="text/css" href="./Css/App.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+      background: #000000;
+      color: #e4e4e4;
+      line-height: 1.7;
+    }
+
+    /* COLORFUL GLOW TITLE */
+    .title {
+      text-align: center;
+      font-size: 3rem;
+      font-weight: 700;
+      margin-top: 70px;
+      margin-bottom: 20px;
+      color: white;
+      letter-spacing: 1px;
+      background: linear-gradient(90deg, #ff4d4d, #ffae00, #00eaff, #d400ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: glow 6s linear infinite;
+    }
+
+    @keyframes glow {
+      0% { filter: drop-shadow(0 0 6px #ff4d4d); }
+      25% { filter: drop-shadow(0 0 6px #ffae00); }
+      50% { filter: drop-shadow(0 0 6px #00eaff); }
+      75% { filter: drop-shadow(0 0 6px #d400ff); }
+      100% { filter: drop-shadow(0 0 6px #ff4d4d); }
+    }
+
+    /* CONTENT BLOCK */
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 25px 80px;
+      text-align: center;
+    }
+
+    p {
+      font-size: 18px;
+      margin-bottom: 22px;
+      color: #cccccc;
+    }
+
+    /* SECTION HEADINGS */
+    h2 {
+      font-size: 2rem;
+      margin-top: 50px;
+      margin-bottom: 20px;
+      font-weight: 600;
+      color: white;
+      background: linear-gradient(90deg, #ffae00, #00eaff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* COLORFUL DIVIDER */
+    .divider {
+      width: 100px;
+      height: 4px;
+      margin: 0 auto 30px;
+      border-radius: 10px;
+      background: linear-gradient(90deg, #ff4d4d, #d400ff, #00eaff);
+      box-shadow: 0 0 10px #d400ff;
+    }
+
+    /* BACK BUTTON */
+    .back-btn {
+      display: inline-block;
+      margin-top: 40px;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 30px;
+      font-size: 16px;
+      cursor: pointer;
+      color: black;
+      background: linear-gradient(90deg, #ff4d4d, #ffae00, #00eaff);
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .back-btn:hover {
+      filter: brightness(1.2);
+    }
+
+    @media (max-width: 600px) {
+      .title {
+        font-size: 2.4rem;
+        margin-top: 50px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="navbar" id="navbar">
+    <div class="nav-logo">
+      <div class="logo-wrapper">
+        <img src="Images/logosmall.png" class="logo-small" alt="Logo" />
+        <img src="Images/logo.png" class="main-logo" alt="Main Logo" />
+        <img src="Images/TPN Gold Shield.png" class="logo-badge" alt="Gold Shield" />
+      </div>
+    </div>
+
+    <div class="hamburger" id="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <div class="nav-links">
+      <a href="index.html#aboutus">Home</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#projects">Projects</a>
+      <a href="AboutUs.html">About Us</a>
+      <a href="index.html#contact">Contact Us</a>
+    </div>
+  </div>
+  <h1 class="title">About Us</h1>
+  <div class="divider"></div>
+
+  <main>
+    <p>
+      At Universal EFX Studios, we bring imagination to life through world-class 
+      visual effects and post-production artistry.
+    </p>
+
+    <p>
+      Founded by passionate creators and industry professionals, we specialize in delivering 
+      high-quality VFX, Rotoscoping, Paint/Cleanup, Compositing, and Matchmove services for 
+      feature films, television, OTT platforms, and commercials.
+    </p>
+
+    <p>
+      Over the years, our team has contributed to a wide range of Indian and international 
+      projects, combining technical precision with creative storytelling. Whether it’s a complex 
+      wire removal, an intricate roto sequence, or seamless CG integration, we take pride in 
+      maintaining the highest standards of quality, efficiency, and confidentiality.
+    </p>
+
+    <p>
+      We believe that great visuals come from great partnerships. By working closely with 
+      filmmakers, studios, and production houses, we ensure that every frame tells a story 
+      powerfully and beautifully.
+    </p>
+
+    <h2>Our Vision</h2>
+    <p>
+      To be a globally recognized creative hub that consistently delivers exceptional visual 
+      effects and inspires the next generation of digital artists.
+    </p>
+
+    <h2>Our Mission</h2>
+    <p>
+      To provide reliable, scalable, and creative VFX solutions that transform imagination 
+      into cinematic reality.
+    </p>
+
+    <button class="back-btn" onclick="history.back()">Back</button>
+  </main>
+
