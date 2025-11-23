@@ -740,12 +740,12 @@ body {
   }
 
   .main-logo {
-    max-width: 100px !important;
-    height: auto;
+    width: 150px !important;
+    height: 30px;
   }
 
   .logo-badge {
-    width: 40px !important;
+    width: 70px !important;
     height: auto;
   }
 
