@@ -1,129 +1,42 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Us | Universal EFX Studios</title>
-    <link rel="stylesheet" href="./Css/AboutUs.css" />
-  </head>
-  <body>
-    <div class="navbar">
-      <img src="../Images/UES Logo.png" id="companylogo" alt="companylogo" />
-      <div class="nav-links">
-        <a href="./Home.html">Home</a>
-        <a href="./Services.html">Services</a>
-        <a href="#">Projects</a>
-        <a href="./AboutUs.html">About Us</a>
-        <a href="./ContactUs.html">Contact Us</a>
-      </div>
-    </div>
-    <section class="about-section">
-      <h1 class="page-title">
-        Where Art Meets Precision — And Every Frame Matters
-      </h1>
-      <p class="intro">
-        At Universal EFX Studios Pvt. Ltd., we are a team of passionate visual
-        storytellers, technicians and producers dedicated to delivering
-        high-quality visual effects that elevate every frame.
-        <br /><br />
-        With a sharp focus on Rotoscopy, Prep/Paint, Matchmove and Compositing,
-        we serve as an extended arm to production studios, post houses and
-        agencies across the globe.
-        <br /><br />
-        We don’t just execute — we collaborate. Our goal is to understand your
-        creative vision and support it with the right technical execution, no
-        matter the complexity or scale of the task.
-      </p>
-
-      <hr />
-
-      <div class="about-block">
-        <h2>🎯 Our Mission</h2>
-        <p class="intro">
-          To empower filmmakers, studios and brands with world-class VFX
-          services that are efficient, secure and visually flawless — delivered
-          with clarity, creativity and commitment.
-        </p>
-      </div>
-
-      <hr />
-
-      <div class="about-block">
-        <h2>🌍 Who We Work With</h2>
-        <ul class="intro">
-          <li>International Film Production Studios</li>
-          <li>OTT Platforms and Streaming Networks</li>
-          <li>Commercial & Advertising Agencies</li>
-          <li>Independent Directors & Creators</li>
-          <li>Post-Production & VFX Houses</li>
-        </ul>
-        <p class="para">
-          Whether you’re handling blockbuster-level sequences or a fast-paced ad
-          film, we scale our services to match your pace and vision.
-        </p>
-      </div>
-
-      <hr />
-
-      <div class="about-block">
-        <h2>🔐 Why Choose Us?</h2>
-        <ul class="intro">
-          <li>TPN Certified – Ensuring industry-standard content security</li>
-          <li>Reliable Turnaround – On-time delivery, every time</li>
-          <li>Flexible Workflow – Scalable teams & remote capabilities</li>
-          <li>
-            Experienced Artists – Skilled in Nuke, Silhouette, Mocha, PFTrack
-            and more
-          </li>
-          <li>
-            Proactive Production Management – Smooth communication from day one
-          </li>
-        </ul>
-      </div>
-
-      <hr />
-
-      <div class="about-block">
-        <h2>📌 Our Core Services</h2>
-        <ul class="intro">
-          <li>
-            <a class="listtags" href="./Services.html">Rotoscopy</a>
-          </li>
-          <li>
-            <a class="listtags" href="./Services.html"
-              >Prep / Clean-up (Paint)</a
-            >
-          </li>
-          <li>
-            <a class="listtags" href="./Services.html"
-              >Matchmoving & 3D Tracking</a
-            >
-          </li>
-          <li>
-            <a class="listtags" href="./Services.html"
-              >Compositing & Shot Integration</a
-            >
-          </li>
-        </ul>
-      </div>
-
-      <blockquote class="closing-quote">
-        “Our team may work behind the scenes, but our impact is always front and
-        center.”
-      </blockquote>
-    </section>
-  </body>
-</html> -->
-
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Universal EFX Studios — About Us</title>
+
+  <link rel="stylesheet" type="text/css" href="./Css/App.css" />
 </head>
-<body style="margin:0;background:black;color:white;display:flex;justify-content:center;align-items:center;min-height:100vh;text-align:center;font-family:Arial, sans-serif;">
-  <main style="max-width:700px;padding:20px;">
+
+<body style="margin:0;background:black;color:white;">
+
+  <!-- NAVBAR -->
+  <div class="navbar" id="navbar">
+    <div class="nav-logo">
+      <div class="logo-wrapper">
+        <img src="Images/logosmall.png" class="logo-small" alt="Logo" />
+        <img src="Images/logo.png" class="main-logo" alt="Main Logo" />
+        <img src="Images/TPN Gold Shield.png" class="logo-badge" alt="Gold Shield" />
+      </div>
+    </div>
+
+    <div class="hamburger" id="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <div class="nav-links">
+      <a href="index.html#aboutus">Home</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#projects">Projects</a>
+      <a href="AboutUs.html">About Us</a>
+      <a href="index.html#contact">Contact Us</a>
+    </div>
+  </div>
+
+  <!-- About Us Content -->
+  <main style="max-width:700px;padding:20px;margin:0 auto;padding-top:100px;text-align:center;min-height:100vh;">
     <button onclick="history.back()" style="margin-bottom:20px;padding:10px 16px;border:none;background:#333;color:white;border-radius:6px;cursor:pointer;">⟵ Back</button>
 
     <h1>About Us</h1>
@@ -131,7 +44,7 @@
 
     <p>Founded by passionate creators and industry professionals, we specialize in delivering high-quality VFX, Rotoscoping, Paint/Cleanup, Compositing, and Matchmove services for feature films, television, OTT platforms, and commercials.</p>
 
-    <p>Over the years, our team has contributed to a wide range of Indian and international projects combining technical precision with creative storytelling. Whether it’s a complex wire removal, an intricate roto sequence, or seamless CG integration, we take pride in maintaining the highest standards of quality, efficiency, and confidentiality.</p>
+    <p>Over the years, our team has contributed to a wide range of Indian and international projects combining technical precision with creative storytelling. Whether it’s a complex wire removal, an intricate roto sequence, or seamless CG integration, we pride ourselves on maintaining the highest standards of quality, efficiency, and confidentiality.</p>
 
     <p>We believe that great visuals come from great partnerships. By working closely with filmmakers, studios, and production houses, we ensure every frame tells a story beautifully and powerfully.</p>
 
@@ -141,5 +54,29 @@
     <h2>Our Mission</h2>
     <p>To provide reliable, scalable, and creative VFX solutions that transform imagination into cinematic reality.</p>
   </main>
+
+  <!-- NAV SCRIPTS -->
+  <script>
+    const navbar = document.querySelector('.navbar');
+
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.querySelector(".nav-links");
+
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+
+    // Close hamburger when clicking a link
+    document.querySelectorAll(".nav-links a").forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+      });
+    });
+  </script>
+
 </body>
 </html>
