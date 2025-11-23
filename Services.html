@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -30,7 +30,6 @@
 
       <hr />
 
-      <!-- Rotoscoping -->
       <div class="service-block">
         <h2>🔍 Rotoscoping</h2>
         <p class="description">
@@ -49,7 +48,6 @@
 
       <hr />
 
-      <!-- Prep / Paint -->
       <div class="service-block">
         <h2>🧽 Prep / Paint (Cleanup)</h2>
         <p class="description">
@@ -69,7 +67,6 @@
 
       <hr />
 
-      <!-- Match Moving -->
       <div class="service-block">
         <h2>🎯 Match Moving / Tracking</h2>
         <p class="description">
@@ -88,7 +85,6 @@
 
       <hr />
 
-      <!-- Compositing -->
       <div class="service-block">
         <h2>🎨 Compositing</h2>
         <p class="description">
@@ -109,7 +105,6 @@
 
       <hr />
 
-      <!-- Industries -->
       <div class="service-block">
         <h2>💼 Industries We Serve</h2>
         <ul class="industries">
@@ -123,7 +118,6 @@
 
       <hr />
 
-      <!-- Why Choose Us -->
       <div class="service-block">
         <h2>🤝 Why Choose Universal EFX Studios?</h2>
         <ul>
@@ -136,4 +130,118 @@
       </div>
     </section>
   </body>
+</html> -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Universal EFX Studios — Services</title>
+
+  <link rel="stylesheet" type="text/css" href="./Css/Services.css" />
+  <link rel="stylesheet" type="text/css" href="./Css/App.css" /> 
+</head>
+
+<body style="margin:0;background:black;color:white;">
+
+  <!-- NAVBAR -->
+  <div class="navbar" id="navbar">
+    <div class="nav-logo">
+      <div class="logo-wrapper">
+        <img src="Images/logosmall.png" class="logo-small" alt="Logo" />
+        <img src="Images/logo.png" class="main-logo" alt="Main Logo" />
+        <img src="Images/TPN Gold Shield.png" class="logo-badge" alt="Gold Shield" />
+      </div>
+    </div>
+
+    <div class="hamburger" id="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <div class="nav-links">
+      <a href="index.html#aboutus">Home</a>
+      <a href="Services.html">Services</a>
+      <a href="index.html#projects">Projects</a>
+      <a href="AboutUs.html">About Us</a>
+      <a href="index.html#contact">Contact Us</a>
+    </div>
+  </div>
+
+  <!-- SERVICES CONTENT -->
+  <main style="padding-top:100px;max-width:1600px;margin:0 auto;text-align:center;">
+
+    <h1 style="font-size:42px;margin-bottom:40px;font-family:'Times New Roman', serif;">
+      Our Services
+    </h1>
+
+    <div class="services-container">
+
+      <div class="service-card">
+        <h3>Rotoscoping</h3>
+        <p>Clean edges. Perfect motion. Every frame.</p>
+        <ul>
+          <li>✔ Complex hair & motion blur details</li>
+          <li>✔ Multi-pass roto for VFX layering</li>
+          <li>✔ Delivered in Nuke, Silhouette or Mocha</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <h3>Prep / Paint (Cleanup)</h3>
+        <p>We erase what shouldn't be there — flawlessly.</p>
+        <ul>
+          <li>✔ Wire & rig removal</li>
+          <li>✔ Beauty cleanup / tattoo removal</li>
+          <li>✔ BG & plate fixes</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <h3>Matchmoving / Tracking</h3>
+        <p>Accurate tracking for perfect CG integration.</p>
+        <ul>
+          <li>✔ Object & face tracking</li>
+          <li>✔ Lens distortion correction</li>
+          <li>✔ FBX / Alembic / Maya-ready outputs</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <h3>Compositing</h3>
+        <p>Bringing it all together — seamlessly.</p>
+        <ul>
+          <li>✔ Green-screen keying</li>
+          <li>✔ Color correction & relighting</li>
+          <li>✔ Nuke & AE workflows</li>
+        </ul>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- NAV SCRIPT -->
+  <script>
+    const navbar = document.querySelector('.navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.querySelector(".nav-links");
+
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+      });
+    });
+  </script>
+
+</body>
 </html>
